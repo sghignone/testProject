@@ -37,8 +37,9 @@ setwd("~/Projects/testProject/")
 
 ##compute the GC content in a sliding window (as a fraction) for a sequence
 letterFrequency(sequences.ordered.seq[1], letters="NACGT", OR=0)
-alphabetFrequency(sequences.ordered.seq[[1]])
-uniqueLetters(sequences.ordered.seq[[1]])
+alphabetFrequency(DNAString(sequences.ordered.seq[[1]]))
+hasOnlyBaseLetters(DNAString(sequences.ordered.seq[[1]]))
+uniqueLetters(DNAString(sequences.ordered.seq[[1]]))
 sum(alphabetFrequency(sequences.ordered.seq[[1]])) == length(sequences.ordered.seq[[1]])
 
 maskedSeq <-maskMotif(sequences.ordered.seq[[1]], "N")
