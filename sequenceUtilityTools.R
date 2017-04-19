@@ -42,10 +42,10 @@ hasOnlyBaseLetters(DNAString(sequences.ordered.seq[[1]]))
 uniqueLetters(DNAString(sequences.ordered.seq[[1]]))
 sum(alphabetFrequency(sequences.ordered.seq[[1]])) == length(sequences.ordered.seq[[1]])
 
-maskedSeq <-maskMotif(sequences.ordered.seq[[1]], "N")
+maskedSeq <- maskMotif(sequences.ordered.seq[[1]], "N")
 
 
-window = 15000
-AT = rowSums(letterFrequencyInSlidingView(maskedSeq, window, c("A", "T")))/window
+window <- 15000
+AT <- rowSums(letterFrequencyInSlidingView(DNAString(maskedSeq), window, c("A", "T")))/window
 plot(AT, type = 'l')
 lines(lowess(x = 1:length(AT), y= AT, f = 0.10), col = 12, lwd = 2)
