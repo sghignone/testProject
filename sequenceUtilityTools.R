@@ -31,8 +31,8 @@ setwd("~/Projects/testProject/")
 #                   ,'-perc_identity',".90"
 #                   ,'-remote'
 #                    )
-#                    ,input=x
-#                    ,stdout=TRUE )
+#                   ,input=x
+#                   ,stdout=TRUE )
 
 
 ##compute the GC content in a sliding window (as a fraction) for a sequence
